@@ -1,6 +1,9 @@
 import React from "react";
 import { capitalize } from "lodash";
-import { formatTitle, addPrefix } from "@my-workspace/web";
+import { formatTitle, addPrefix } from "@my-workspace/web/src/utils/string";
+import { Typography, Space, Card } from "antd";
+
+const { Title } = Typography;
 
 const App: React.FC = () => {
   const title = capitalize("a管理后台");
@@ -8,9 +11,12 @@ const App: React.FC = () => {
   const finalTitle = addPrefix(formattedTitle, "==>");
 
   return (
-    <div>
-      <h1>{finalTitle}</h1>
-    </div>
+    <Card style={{ margin: 20 }}>
+      <Space direction="vertical">
+        <Title level={1}>{finalTitle}</Title>
+        <Title level={2}>使用 Ant Design</Title>
+      </Space>
+    </Card>
   );
 };
 
