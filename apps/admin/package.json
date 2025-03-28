@@ -8,6 +8,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "@my-workspace/web": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0"
